@@ -11,7 +11,6 @@ angular.module('$feedback.directives',[]).directive('feedbackWidget',['$http',($
       element.find('button.btn-feedback-submit').bind('click',() ->
         $http.post(scope.url,{feedback:scope.feedback})
         scope.$apply(() ->
-          scope.feedback.comment = ''
           scope.thanksText = 'Thanks for your feedback!' if scope.thanksText==undefined || scope.thanksText.length==0
           scope.thanksMsg = true
           scope.viewMode = 'sm'

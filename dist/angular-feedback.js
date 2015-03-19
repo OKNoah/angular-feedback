@@ -15,7 +15,6 @@
               feedback: scope.feedback
             });
             return scope.$apply(function() {
-              scope.feedback.comment = '';
               if (scope.thanksText === void 0 || scope.thanksText.length === 0) {
                 scope.thanksText = 'Thanks for your feedback!';
               }
